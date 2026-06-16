@@ -700,7 +700,7 @@ export default function BudgetTracker() {
                 <TabsContent value="timeline" className="mt-0">
                   <p className="text-xs text-slate-400 mb-3">Per-person expense across 12 months — see the Month 1 spike.</p>
                   <div className="h-56 sm:h-64 w-full">
-                    <ResponsiveContainer width="100%" height="100%">
+                    <ResponsiveContainer width="100%" height="100%" minWidth={1} minHeight={1}>
                       <BarChart data={timelineData} margin={{ top: 5, right: 5, left: -15, bottom: 0 }}>
                         <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
                         <XAxis dataKey="name" stroke="#94a3b8" tickLine={false} axisLine={false} fontSize={11} />
@@ -724,7 +724,7 @@ export default function BudgetTracker() {
                 <TabsContent value="breakdown" className="mt-0">
                   <p className="text-xs text-slate-400 mb-3">How your recurring monthly total splits across categories.</p>
                   <div className="h-56 sm:h-64 w-full">
-                    <ResponsiveContainer width="100%" height="100%">
+                    <ResponsiveContainer width="100%" height="100%" minWidth={1} minHeight={1}>
                       <PieChart>
                         <Pie
                           data={pieData}
@@ -765,7 +765,7 @@ export default function BudgetTracker() {
                 <TabsContent value="cumulative" className="mt-0">
                   <p className="text-xs text-slate-400 mb-3">Cumulative per-person spend over 12 months.</p>
                   <div className="h-56 sm:h-64 w-full">
-                    <ResponsiveContainer width="100%" height="100%">
+                    <ResponsiveContainer width="100%" height="100%" minWidth={1} minHeight={1}>
                       <AreaChart data={cumulativeData} margin={{ top: 5, right: 5, left: -15, bottom: 0 }}>
                         <defs>
                           <linearGradient id="gradArea" x1="0" y1="0" x2="0" y2="1">
@@ -803,7 +803,7 @@ export default function BudgetTracker() {
             <CardContent>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
                 <div className="h-48 w-full">
-                  <ResponsiveContainer width="100%" height="100%">
+                  <ResponsiveContainer width="100%" height="100%" minWidth={1} minHeight={1}>
                     <PieChart>
                       <Pie
                         data={moveInPieData}
